@@ -1,88 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <title>Static interactive resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume Builder</title>
     <link rel="stylesheet" href="style.css">
-    <a href="./index.html">index</a>
-    <a href="./anila preply pic.jpg">pic</a>
-    <a href="../mile stone 3 dynamic resume/index.html">milestone 3</a>
-    <a href="../mile stone 4 editable resume/index.html">milestone 4</a>
-    <a href="../mile stone 5 shareable resume/index.html">milestone 5</a>
-    </head>
+</head>
 <body>
-    
-    <div class="resume-container">
-        <!-- left section -->
-         <div class="left-section">
-            <img src="anila preply pic.jpg" alt="profile picture"class="profile-pic">
+    <h1>Shareable Resume Builder</h1>
+    <form id="resume-form">
+    <fieldset>
+        <legend>Personal Information</legend>
 
-            <section id="objective">
-                <h3 style="color:white;">Career Objective</h3>
-                <p style="text-align: justify;hyphens: auto;">Seeking a position in a dynamic organization where I can launch my career and work towards building a strong skill set. A hard working individual looking for a challenging position where I can showcase my skills and contribute to the growth of the organization.</p>
-            </section>
+        <label for="username"> User Name:</label>
+        <input type="text" id="username" placeholder="Enter your username" required>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
 
-            <section id="certification">
-            <h3 style="color: white;">certification</h3>
-            <p><b>CIT:from KMA institute</b></p>
-            <p><b>graphics:from KMA institute</b></p>
-            <p><b>web designing:from KMA institute</b></p>
-            <p><b>Artificial intelligence,web 3.0 & Metaverse:from governor house khi (cont)...</b></p>
-            </section>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
 
-            
-         </div>
-         <!-- right section -->
-          <div class="right-section">
-            <h1>Static Interactive Resume</h1>
-            <!-- personal information -->
-             <section id="personal information">
-             <h3>personal information</h3>
-             <p><b>Name:</b>Anila Ahmed</p>
-             <p><b>phone:</b>0323-2219437</p>
-             <p><b>E-mail:</b>anilaahmed1987@gmail.com<a href="mailto:anilaahmed1987@gmail.com"></a></p>
-             </section>
-             <!-- Education Section -->
-              <section id="education">
-                <h3>Education</h3>
-                <p><b>BSC:</b>From Karachi University</p>
-                <p><b>BEd:</b>From Allama Iqbal open University</p>
-                <p><b>Fsc:</b>From Inter board Karachi</p>
-                <p><b>Matriculation:</b> From Khalik Dina School Karachi</p>
-              </section>
-              <!-- SKILL SECTION -->
-               <section id="skill">
-                <h3>Skill</h3>
-                <ul>
-                    <li>Business Development</li>
-                    <li>Acadamic co-ordinator</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Type Script</li>
-                    <li>Next Js</li>
-                    <li>Communicatiion Skill</li>
-                    <li>Soft Skill</li>
-                    <li>Teaching</li>
-                    <li>canva</li>
-                    <li>Digital Marketing</li>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+    </fieldset>
 
+    <fieldset>
+        <legend>Education</legend>
+        <label for="education">Education:</label>
+        <textarea name="" id="education" placeholder="Enter your education" rows="4 required"></textarea>
+    </fieldset>
 
-                </ul>
-               </section>
+    <fieldset>
+        <legend>Experience</legend>
+        <label for="experience">Experience:</label>
+        <textarea name="" id="experience" placeholder="Enter your work experience" rows="4 required"></textarea>
+    </fieldset>
 
-               <!-- WORK EXPERIENCE -->
-                <section id="work experience">
-                    <h3>Work Experience</h3>
-                    <p><b>British Concil:</b> 3 years experience Lead as a project Head with London school of Wales with Project name Connecting Class Room</p>
-                    <p>Ghulam Hussain Khalik Dina Girls School: <b> Lead as a Project Director , Acadamic Co-ordinator </b></p>
+    <fieldset>
+        <legend>Skills</legend>
+        <label for="skills">skill:</label>
+        <textarea name="" id="skills" placeholder="Enter your skills" rows="4 required"></textarea>
+    </fieldset>
 
-                </section>
+    <button type="submit"> <b>Generate Resume </b></button>
+   
 
-                <!-- BUTTON TO TOGGLE SKILL SECTION -->
-                 <button id="toggle-skill"><b>Hide/Show Skill</b></button>
-
-          </div>
+    </form>
+    <br>
+    <!-- Shareable Resume -->
+     <div id="resume-display" contenteditable="true">
+     
     </div>
-    <script src="script.js"></script>
+    <!--shareable resume will be generated below -->
+
+    <br>
+    <!-- section for the shareable link and down load option -->
+
+     <div id="shareable-link-container" style="display: none;">
+        <h2>Shareable link</h2>
+        <p>Here is a unique link to view or edit your resume:</p>
+        <a href="#" id="shareable-link" target="_blank"></a>
+        <br>
+        <button id="download-pdf"><b>Download As PDF</b></button>
+        
+
+
+     </div>
+
+     <script src="main.js"></script>
 
 </body>
 </html>
